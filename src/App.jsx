@@ -1,5 +1,4 @@
 import React, { useState} from 'react';
-import ReactDOM from 'react-dom/client';
 
 const App = () => {
   const [title, setTitle] = useState('');
@@ -122,7 +121,7 @@ const App = () => {
         {searchedSong && !loading && lyrics !== null && (
           <div className="mt-6 p-4 sm:p-6 bg-slate-700 rounded-md overflow-auto h-64 shadow">
             <h2 className="text-xl sm:text-2xl font-semibold text-sky-400 mb-3">
-              Lirik untuk <span className="italic">"{searchedSong.title}"</span> oleh <span className="italic">{searchedSong.artist}</span>:
+              Lirik untuk <span className="italic">"{searchedSong.title}"</span> oleh <span className="italic">{searchedSong.artist}</span>
             </h2>
             {lyrics === '' ? (
               <p className="text-slate-400">Lirik tidak ditemukan untuk lagu ini.</p>
@@ -140,15 +139,4 @@ const App = () => {
   );
 };
 
-const container = document.getElementById('root');
-if (container) {
-  const root = ReactDOM.createRoot(container);
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-} else {
-  console.error("Target container 'root' not found in the DOM.");
-}
 export default App;
