@@ -116,11 +116,11 @@ const App = () => {
       <section aria-live="polite">
         {lyrics === null && !loading && !error && !searchedSong && (
            <div className="mt-6 p-6 bg-slate-700/50 rounded-md text-center text-slate-400">
-             <p>Masukkan judul lagu dan nama penyanyi di atas, lalu klik 'Cari Lirik'.</p>
+             <p>Masukkan judul lagu dan nama penyanyi di atas, lalu klik "Cari Lirik".</p>
            </div>
         )}
         {searchedSong && !loading && lyrics !== null && (
-          <div className="mt-6 p-4 sm:p-6 bg-slate-700 rounded-md shadow">
+          <div className="mt-6 p-4 sm:p-6 bg-slate-700 rounded-md overflow-auto h-64 shadow">
             <h2 className="text-xl sm:text-2xl font-semibold text-sky-400 mb-3">
               Lirik untuk <span className="italic">"{searchedSong.title}"</span> oleh <span className="italic">{searchedSong.artist}</span>:
             </h2>
