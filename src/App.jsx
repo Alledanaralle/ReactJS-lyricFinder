@@ -119,7 +119,7 @@ const App = () => {
            </div>
         )}
         {searchedSong && !loading && lyrics !== null && (
-          <div className="mt-6 p-4 sm:p-6 bg-slate-700 rounded-md overflow-auto h-64 shadow">
+          <div className="mt-6 p-4 sm:p-6 bg-slate-700 rounded-md overflow-y-auto h-64 shadow">
             <h2 className="text-xl sm:text-2xl font-semibold text-sky-400 mb-3">
               Lirik untuk <span className="italic">"{searchedSong.title}"</span> oleh <span className="italic">{searchedSong.artist}</span>
             </h2>
@@ -132,7 +132,7 @@ const App = () => {
         )}
       </section>
        <footer className="mt-4 text-center text-xs text-slate-500">
-        <p>Lirik disediakan oleh <a href="https://lyrics.ovh" target="_blank" rel="noopener noreferrer" className="underline hover:text-sky-400">lyrics.ovh</a></p>
+        <p>Lirik disediakan oleh <a href="https://lyrics.ovh" target="_blank" rel="noopener noreferrer" className="underline hover:text-sky-400">lyrics.ovh</a>. Note: Tidak semua lirik lagu tersedia</p>
       </footer>
     </div>
     </div>
