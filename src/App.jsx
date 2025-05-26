@@ -121,12 +121,12 @@ const App = () => {
         {searchedSong && !loading && lyrics !== null && (
           <div className="mt-6 p-4 sm:p-6 bg-slate-700 rounded-md overflow-y-auto h-64 shadow">
             <h2 className="text-xl sm:text-2xl font-semibold text-sky-400 mb-3">
-              Lirik untuk <span className="italic">"{searchedSong.title}"</span> oleh <span className="italic">{searchedSong.artist}</span>
+              Lirik untuk <span>"{searchedSong.title}"</span> oleh <span>"{searchedSong.artist}"</span>
             </h2>
             {lyrics === '' ? (
               <p className="text-slate-400">Lirik tidak ditemukan untuk lagu ini.</p>
             ) : (
-              <pre className="lyrics-container text-sm sm:text-base text-slate-300 leading-relaxed font-sans">{lyrics}</pre>
+              <pre className="text-sm sm:text-base text-slate-300 leading-relaxed font-[poppins]">{lyrics}</pre>
             )}
           </div>
         )}
